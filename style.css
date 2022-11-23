@@ -1,0 +1,283 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html, body {
+    height: 100%;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+}
+
+header {
+    background-color: #0d60c7;
+}
+
+h1 {
+    font-family: 'Lobster', cursive;
+    font-size: 3em;
+}
+
+h1 img {
+    width: 1.2em;
+    border-radius: 50%;
+    border: 3px solid #349bcf;
+}
+
+#menuPrincipal, #menuPrincipal .navbar {
+    background-color: #fcdb33;
+    color: #003791; 
+}
+
+nav a {
+    color: #726317;
+    transition: .3s ease-in;
+}
+
+button {
+    color: #726317;
+}
+
+nav a:hover {
+    color: #333538;
+    transition: .3s ease-in;
+}
+
+h3, h4 {
+    background-color: #ea5165;
+}
+
+h3, h4, h5 {
+    font-family: 'Lobster', cursive;    
+}
+
+#texto {
+    font-family: 'Roboto', sans-serif;;
+}
+
+.seccionCentral {
+    background-color: #e5e5e5;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.card {
+    background-color: white;
+    border: 2px solid #6a6d6f74;
+    color: #6a6d6f;
+}
+
+.card p {
+    line-height: 2em;
+}
+
+#consisteJuego h3 {
+    background-color: #349bcf;
+    border-top: 3px solid #0d60c7;
+    border-bottom: 3px solid #0d60c7;
+}
+
+#normasJuego h3 {
+    background-color: #fcdb33;
+    border-top: 3px solid #e2bd01;
+    border-bottom: 3px solid #e2bd01;
+}
+
+#modosJuego h3 {
+    background-color: #ea5165;
+    border-top: 3px solid rgb(186, 43, 57);
+    border-bottom: 3px solid rgb(186, 43, 57);
+}
+
+p span {
+    background-color: #0d60c7;
+    padding: .3em .5em;
+    color: white;
+    transition: .3s ease-in;    
+}
+
+p span:hover {
+    cursor: pointer;
+    transition: .3s ease-in;
+    background-color: rgb(186, 43, 57);
+}
+
+input[type="submit"] {
+    transition: .3s ease-in;
+}
+
+.fa-question {
+    background-color: #349bcf;
+    border: 4px solid #0d60c7;
+    color: white;
+} 
+
+.fa-book {
+    background-color: #fcdb33;
+    border: 4px solid #e2bd01;
+    color: white;
+}
+
+.fa-handshake {
+    background-color: #ea5165;
+    border: 4px solid rgb(186, 43, 57);
+    color: white;    
+}
+
+footer span {
+    background-color: #0d60c7;
+    display: block;
+}
+
+footer a {
+    color: #75b1fb;
+    transition: .5s ease-in;
+}
+
+footer a:hover {
+    color: #00326f;
+    transition: .5s ease-in;
+}
+
+.ruletaSmall {
+    width: 20px;
+    border: 1px solid transparent;
+}
+
+a:hover {
+    cursor: pointer;
+}
+
+#jugadorUno h3, #jugadorUno i {
+    background-color: #349bcf;
+    color: white;
+    border: 2px solid white;
+    outline: 2px solid #349bcf;
+}
+
+#jugadorDos h3, #jugadorDos i {
+    background-color: #ea5165;
+    color: white; 
+    border: 2px solid white;
+    outline: 2px solid #ea5165;
+}
+
+#jugadorTres h3, #jugadorTres i {
+    background-color: #fcdb33;
+    color: white;
+    border: 2px solid white;
+    outline: 2px solid #fcdb33;
+}
+
+#jugadorVelocidad h3, #jugadorVelocidad i {
+    background-color: #14d652;
+    color: white;
+    border: 2px solid white;
+    outline: 2px solid #14d652;
+}
+
+h3 {
+    margin-bottom: 0em;
+}
+
+#pista {
+    color: #333538;
+}
+
+.letraAcertada {
+    display: inline-block;
+    padding: 1em;
+    background-color: #f08257;
+    border: 2px solid #e74f13;
+    border-radius: 5px;
+    color: #f08257;
+    margin-top: .2em;
+}
+
+.letraAcertada:hover {
+    cursor: pointer;
+}
+
+.letraFrente {
+    display: inline-block;
+    padding: 1em;
+    background-color: white;
+    border: 2px solid #6a6d6f74;
+    border-radius: 5px;
+    color: #333538;
+    margin-top: .2em;
+}
+
+.letraFrente:hover {
+    cursor: pointer;
+}
+
+.letraReves {
+    display: inline-block;
+    padding: 1em;
+    background-color: white;
+    border: 2px solid #6a6d6f74;
+    border-radius: 5px;
+    color: white;
+    margin-top: .2em;
+}
+
+.letraReves:hover {
+    cursor: pointer;
+}
+
+.espacio {
+    display: inline-block;
+    padding: 1em;
+    background-color: #0d60c7;
+    border-radius: 5px;
+    color: #0d60c7;
+    border: 2px solid #003d87;
+}
+
+.pista {
+    border: 2px solid #6a6d6f74;
+    border-radius: 3px;
+}
+
+.palabra {
+    display: inline;
+    width: 100%;
+}
+
+.linea {
+    display: inline-blocl;
+    width: 100%;
+}
+
+#menuJugadores a {
+    padding: 1em;
+    background-color: #c2c4c7;
+    color: #565b62;
+    margin: .5em .5em;
+    border-radius: 2px;
+    border: 1px solid #6a6d6f74;
+    transition: .3s ease-in;
+}
+
+#menuJugadores a:hover {
+    background-color: #565b62;
+    color: #c2c4c7;
+    transition: .3s ease-in;
+}
+
+#numeroPanel {
+    background-color: #ea5165;
+}
+
+#tirada {
+    background-color: #fcdb33;
+}
+
+#fecha {
+    font-size: .7em;;
+}

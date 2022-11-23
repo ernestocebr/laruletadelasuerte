@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="Autor" content="Ernesto Cebrián">
+    <!-- CDN de Bootstrap --> 
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+    <!-- CDN de SweetAlert-->
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <!-- Fontawesome --> 
+    <link href="css/all.min.css" rel="stylesheet">
+    <link href="style.css" rel="stylesheet">
+    <link rel="shortcut icon" href="img/icono.png" type="image/x-icon">
+    <title>La Ruleta de la Suerte - Prueba de velocidad</title>
+</head>
+<body>
+    <!-- Header -->
+    <header class="p-3 text-center">
+        <h1 class="text-white"><img src="img/icono.png" alt="logoRuleta">&nbsp;La Ruleta de la Suerte&nbsp;<img src="img/icono.png" alt="logoRuleta"></h1>
+    </header>
+    <!-- Navegación -->
+    <nav id="menuPrincipal" class="navbar navbar-expand-lg p-1">
+        <div class="container text-center d-flex justify-content-center">
+            <div class="d-flex justify-content-center">
+                <!-- Botón hamburguesa -->
+                <button class="navbar-toggler navbar-light text-center" type="button" data-toggle="collapse" data-target="#barraNavegacion" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </div>
+            <div class="collapse navbar-collapse justify-content-center text-center" id="barraNavegacion">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item"><a class="nav-link" href="resolverPanel.html">Resolver el panel</a></li>
+                    <li class="nav-item"><a class="nav-link" href="pruebaVelocidad.html">Prueba de velocidad</a></li>
+                    <li class="nav-item"><a class="nav-link" href="instrucciones.html">Instrucciones</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!-- Main -->
+    <main>
+        <section class="seccionCentral">
+            <h3 class="text-center text-white p-3">Prueba de velocidad</h3>
+            <div class="container pt-2">
+                <div class="container">
+                    <div class="row">
+                        <!-- Pista -->
+                        <div class="container col-12 col-md-3 col-sm-6 mt-5">
+                            <h3 id="pista" class="pista text-center bg-white p-3"></h3>
+                        </div>
+                    </div> 
+                    <div class="row d-flex justify-center">
+                        <!-- Panel -->
+                        <div class="container col-12 col-md-10 col-sm-12 mt-5 mb-5">
+                            <h5 id="texto" class="text-center"></h5>
+                        </div> 
+                    </div>
+                    <div class="row">
+                        <nav id="menuJugadores" class="navbar navbar-expand-lg p-1 mb-3">
+                            <div class="container text-center d-flex justify-content-center">
+                                <div class="d-flex justify-content-center">
+                                    <div class="navbar justify-content-center text-center">
+                                        <ul class="navbar-nav mr-auto">
+                                            <li class="nav-item"><a id="prueba" class="nav-link" onclick="prueba_velocidad();">Iniciar prueba</a></li>
+                                            <li class="nav-item"><a id="resolver" class="nav-link" onclick="parar_resolver();">Parar para resolver</a></li>
+                                            <li class="nav-item"><a class="nav-link" onclick="history.go(0);">Nuevo panel</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </nav>
+                    </div>                
+                    <div class="row">
+                        <!-- Jugador velocidad-->
+                        <div class="container col-10 col-md-4 p-5 mb-3">
+                            <div id="jugadorVelocidad" class="card pt-3 mb-2 text-justify">
+                                <div class="container d-flex justify-content-center pb-3">
+                                    <i class="fas fa-user display-5 p-3 px-4 rounded-circle my-2"></i>
+                                </div>
+                                <h3 id="puntuacionJugadorVelocidad" class="p-4 text-white text-center"></h3>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <h4 id="numeroPanel" class="text-center text-white p-4 mb-0"></h4>    
+    <h4 id="tirada" class="text-center text-white p-4 mb-0"></h4>
+    <!-- Footer -->
+    <footer class="text-center text-white">
+        <span class="p-3"><i class="far fa-copyright"></i> Juego creado por <a href="https://www.linkedin.com/in/ernestocebr/" class="text-decoration-none" target="_blank">Ernesto Cebrián</a></span>
+    </footer>
+    <!-- Scripts de JS y jQuery -->
+    <script src="velocidad.js"></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+</body>
+</html>
+
+
+
+
+
